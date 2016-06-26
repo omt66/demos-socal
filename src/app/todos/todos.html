@@ -1,0 +1,16 @@
+<div>{{title}}</div>
+
+<ul *ngFor="let todo of todos">
+    <todo-item [todo]="todo" (deleted)="deleteTodo(todo)"></todo-item>
+</ul>
+
+<div>
+    <input #newTodo type="text" placeholder="Add your todo here..." />
+    <button (click)="addTodo(newTodo)">Add</button>
+</div>
+
+<div>
+    Total: {{todos.length}}
+    Active: {{getActiveCount()}}
+    Completed: {{getCompletedCount()}}
+</div>

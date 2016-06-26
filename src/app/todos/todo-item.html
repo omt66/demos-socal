@@ -1,0 +1,7 @@
+<li>     
+    <!--<input type="text" [value]="todo.text" />-->
+    <input type="checkbox" [checked]="todo.completed" (click)="handleClick()" /> 
+    <span [class]="status" [contentEditable]="editable" [class]="editable?'editing': ''" > {{todo.text}} </span>
+    <button #btnEdit (click)="toggleEdit(btnEdit)">Edit</button>
+    <button (click)="deleteTodo()">Delete</button>
+</li>

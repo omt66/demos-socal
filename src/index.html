@@ -12,9 +12,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root>Loading...</app-root>
-
-  
+  <app-root>Our app loading...</app-root>
 
     {{#each scripts.polyfills}}
     <script src="{{.}}"></script>
@@ -24,8 +22,6 @@
         System.import('main');
       }).catch(console.error.bind(console));
     </script>
-
-  
 
 </body>
 </html>
